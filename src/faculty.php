@@ -4,52 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Faculty</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 1rem 0;
-        }
-        nav {
-            background-color: #444;
-            overflow: hidden;
-        }
-        nav a {
-            float: left;
-            display: block;
-            color: #fff;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-        }
-        nav a:hover {
-            background-color: #ddd;
-            color: black;
-        }
-        main {
-            padding: 2rem;
-            max-width: 800px;
-            margin: 2rem auto;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 1rem 0;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
+    <link rel="stylesheet" href="res/css/style.css">
+    <link rel="stylesheet" href="res/css/datatables.min.css">
 </head>
 <body>
     <header>
@@ -65,9 +21,42 @@
     <main>
         <h2>Faculty Management</h2>
         <p>This page will be used for CRUD operations for faculty.</p>
+        <table id="facultyTable" class="display">
+            <thead>
+                <tr>
+                    <th> Faculty ID</th>
+                    <th> Faculty Name</th>
+                    <th> Major </th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+        <button>Add Faculty</button>
     </main>
     <footer>
         <p>&copy; 2025 Scheduling App. All rights reserved.</p>
     </footer>
 </body>
 </html>
+
+<script src="res/js/jquery-3.7.1.min.js"></script>
+<script src="res/js/datatables.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('#facultyTable').DataTable({
+            "processing": true,
+            "serverSide": false,
+            "ajax": {
+                "url": "faculty_get.php",
+                "type": "GET",
+                "dataSrc": "data" // Ensure this matches the JSON structure
+            },
+            "columns": [
+                { "data": "id" },
+                { "data": "name" },
+                { "data": "major" }
+            ]
+        });
+    });
+</script>
