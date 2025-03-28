@@ -4,52 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Curriculum</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 1rem 0;
-        }
-        nav {
-            background-color: #444;
-            overflow: hidden;
-        }
-        nav a {
-            float: left;
-            display: block;
-            color: #fff;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-        }
-        nav a:hover {
-            background-color: #ddd;
-            color: black;
-        }
-        main {
-            padding: 2rem;
-            max-width: 800px;
-            margin: 2rem auto;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 1rem 0;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
+    <link rel="stylesheet" href="res/css/style.css">
 </head>
 <body>
     <header>
