@@ -28,7 +28,7 @@ $conn->close();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php echo ($facultyId > 0) ? "Update Faculty" : "Add Faculty"; ?></title>
+    <title>Update Faculty </title>
     <link rel="stylesheet" href="res/css/style.css">
 </head>
 <body>
@@ -38,7 +38,7 @@ $conn->close();
     <?php require_once 'components/nav.php'; ?>
     
     <main>
-        <h2><?php echo ($facultyId > 0) ? "Update Faculty" : "Add Faculty"; ?></h2>
+        <h2>Update Faculty</h2>
         <form action="faculty_update_db.php" method="POST">
             <input type="hidden" id="facultyId" name="facultyId" value="<?php echo htmlspecialchars($faculty['id']); ?>">
 
