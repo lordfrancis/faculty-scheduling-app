@@ -10,13 +10,7 @@
     <header>
         <h1>Curriculum</h1>
     </header>
-    <nav>
-        <a href="index.php">Home</a>
-        <a href="faculty.php">Faculty</a>
-        <a href="curriculum.php">Curriculum</a>
-        <a href="courses.php">Courses</a>
-        <a href="schedule.php">Schedule</a>
-    </nav>
+    <?php require_once 'components/nav.php'; ?>
     <main>
         <h2>Curriculum Management</h2>
         <p>This page will be used for CRUD operations for curriculum.</p>
