@@ -11,13 +11,7 @@
     <header>
         <h1>Faculty</h1>
     </header>
-    <nav>
-        <a href="index.php">Home</a>
-        <a href="faculty.php">Faculty</a>
-        <a href="curriculum.php">Curriculum</a>
-        <a href="courses.php">Courses</a>
-        <a href="schedule.php">Schedule</a>
-    </nav>
+    <?php require_once 'components/nav.php'; ?>
     <main>
         <h2>Faculty Management</h2>
         <p>This page will be used for CRUD operations for faculty.</p>
@@ -27,12 +21,13 @@
                     <th> Faculty ID</th>
                     <th> Faculty Name</th>
                     <th> Major </th>
+                    <th> Action </th>
                 </tr>
             </thead>
             <tbody>
             </tbody>
         </table>
-        <button>Add Faculty</button>
+        <a href="faculty_add_form.php"><button>Add Faculty</button> </a>
     </main>
     <footer>
         <p>&copy; 2025 Scheduling App. All rights reserved.</p>
@@ -55,7 +50,16 @@
             "columns": [
                 { "data": "id" },
                 { "data": "name" },
-                { "data": "major" }
+                { "data": "major" },
+                {
+                    "data": "id",
+                    "render": function(data, type, row) {
+                        return `
+                            <a href="faculty_update_form.php?id=${data}" class="btn btn-primary">Update</a>
+                            <a href="faculty_delete.php?id=${data}" class="btn btn-danger" onclick="return confirm('Are you sure?')">Delete</a>
+                        `;
+                    }
+                }
             ]
         });
     });

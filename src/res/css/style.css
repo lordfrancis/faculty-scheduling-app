@@ -42,3 +42,17 @@ footer {
     bottom: 0;
     width: 100%;
 }
+.btn {
+    padding: 5px 10px;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+    margin: 2px;
+    display: inline-block;
+}
+.btn-primary {
+    background-color: blue;
+}
+.btn-danger {
+    background-color: red;
+}
