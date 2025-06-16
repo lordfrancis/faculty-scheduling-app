@@ -4,5 +4,6 @@
         <a href="curriculum.php">Curriculum</a>
         <a href="courses.php">Courses</a>
         <a href="class-sections.php">Class Sections</a>
+        <a href="rooms.php">Rooms</a>
         <a href="schedule.php">Schedule</a>
 </nav>
