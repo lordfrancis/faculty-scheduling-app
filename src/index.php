@@ -10,13 +10,7 @@
     <header>
         <h1>Welcome to the Scheduling App</h1>
     </header>
-    <nav>
-        <a href="index.php">Home</a>
-        <a href="faculty.php">Faculty</a>
-        <a href="curriculum.php">Curriculum</a>
-        <a href="courses.php">Courses</a>
-        <a href="schedule.php">Schedule</a>
-    </nav>
+   <?php require_once 'components/nav.php'; ?>
     <main>
         <h2>Manage Your Faculty's Schedule Efficiently</h2>
         <p>This app helps you to create and manage the schedule of your faculty with ease.</p>
